@@ -1,5 +1,9 @@
 import React, { useState, useRef } from "react";
 import "../Game/Game.css";
+import "../Game/Cpu.css";
+import "../Game/Motherboard.css";
+import "../Game/FanCpu.css";
+
 import { Link } from "react-router-dom";
 import pccase from "../../Images/case_empty.png";
 
@@ -16,8 +20,10 @@ export default function Game() {
   });
   const motherboardHolderRef = useRef(undefined);
   const cpuHolderRef = useRef(undefined);
+  const cpuFanHolderRef = useRef(undefined);
   const motherboardButton = useRef(undefined);
   const cpuButton = useRef(undefined);
+  const cpuFanButton = useRef(undefined);
 
   const motherboardHolderClick = (e: any) => {
     console.log("Selected:  " + selectedId);
@@ -41,7 +47,8 @@ export default function Game() {
     console.log(placed["1"]);
     if (selectedId === 2 && placed["1"] === true) {
       cpuButton.current.style.display = "none";
-      setPlaced({ ...placed, 1: true });
+      cpuFanHolderRef.current.style.display = "block";
+      setPlaced({ ...placed, 2: true });
       cpuHolderRef.current.style.background = "url('/src/Images/cpu.png')";
       cpuHolderRef.current.style.backgroundRepeat = "no-repeat";
       cpuHolderRef.current.style.backgroundSize = "contain";
@@ -51,6 +58,26 @@ export default function Game() {
     }
     if (!placed["1"]) {
       return setInfo("Vložte prvně základní desku");
+    }
+    setInfo("Vyberte nějakou komponentu.");
+  };
+
+  const cpuFanHolderClick = (e: any) => {
+    console.log("Selected: " + selectedId);
+    console.log(placed["1"]);
+    if (selectedId === 3 && placed["2"] === true) {
+      cpuFanButton.current.style.display = "none";
+      
+      setPlaced({ ...placed, 3: true });
+      cpuFanHolderRef.current.style.background = "url('/src/Images/fan_cpu.png')";
+      cpuFanHolderRef.current.style.backgroundRepeat = "no-repeat";
+      cpuFanHolderRef.current.style.backgroundSize = "contain";
+      cpuFanHolderRef.current.style.border = "none";
+      setInfo("Chladiš pro procesor vložen.");
+      return;
+    }
+    if (!placed["2"]) {
+      return setInfo("Vložte prvně procesor");
     }
     setInfo("Vyberte nějakou komponentu.");
   };
@@ -94,8 +121,7 @@ export default function Game() {
               ? {
                   width: "4.9vw",
                   height: "10vh",
-                  top: "41.5%",
-                  left: "74%",
+                 
                 }
               : {}
           }
@@ -113,14 +139,14 @@ export default function Game() {
 
         <div
           className="chladicProcesor component"
+          ref={cpuFanButton}
           onClick={() => setSelectedId(3)}
           style={
             placed[3]
               ? {
                   width: "9vw",
                   height: "15vh",
-                  top: "40%",
-                  left: "72%",
+                  
                 }
               : {}
           }
@@ -147,6 +173,12 @@ export default function Game() {
           onClick={cpuHolderClick}
           ref={cpuHolderRef}
           className="pccase-component pccase-cpu"
+          style={{ display: "none" }}
+        ></div>
+        <div
+          onClick={cpuFanHolderClick}
+          ref={cpuFanHolderRef}
+          className="pccase-component pccase-cpuFan"
           style={{ display: "none" }}
         ></div>
       </div>

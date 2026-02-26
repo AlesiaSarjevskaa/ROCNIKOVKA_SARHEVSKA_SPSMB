@@ -1,0 +1,36 @@
+  .chladicProcesor {
+    width: 120px;
+    height: 500px;
+    position: absolute;
+    top: 400px;
+    left: 50px;
+    z-index: 6;
+    background: url("../../Images/fan_cpu.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition:
+      top 0.5s ease,
+      left 0.5s ease,
+      width 0.5s ease,
+      height 0.5s ease;
+  }
+  
+  .mistoProChladicProcesor {
+    width: 9vw;
+    height: 15vh;
+    position: absolute;
+    left: 72%;
+    top: 40%;
+    z-index: 5;
+  }
+  
+  .chladicProcesor img {
+    position: relative;
+  }
+
+  .pccase-cpuFan {
+    width: 101px;
+    height: 102px;
+    left: 201px;
+    top: -178px;
+  }

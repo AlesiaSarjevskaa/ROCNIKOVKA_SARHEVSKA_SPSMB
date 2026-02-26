@@ -1,0 +1,36 @@
+  .zakladniDeska {
+    width: 120px;
+    height: 100px;
+    position: absolute;
+    top: 300px;
+    left: 50px;
+    z-index: 3;
+    background: url("../../Images/motherboard.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition:
+      top 0.5s ease,
+      left 0.5s ease,
+      width 0.5s ease,
+      height 0.5s ease;
+  }
+  
+  .mistoProZakladniDesku {
+    width: 16.5vw;
+    height: 33.5vh;
+    position: absolute;
+    left: 67.5%;
+    top: 35%;
+    z-index: 2;
+  }
+
+  .zakladniDeska img {
+    position: relative;
+  }
+
+  .pccase-motherboard {
+    width: 228px;
+    height: 234px;
+    left: 139px;
+    top: 78px;
+  }
