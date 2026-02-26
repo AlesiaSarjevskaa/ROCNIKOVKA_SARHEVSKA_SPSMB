@@ -23,8 +23,14 @@ export default function Game() {
   const cpuFanHolderRef = useRef(undefined);
   const motherboardButton = useRef(undefined);
   const cpuButton = useRef(undefined);
+<<<<<<< HEAD
+  const cpuFanButton = useRef(undefined);
+=======
+  const fanCpuHolderRef = useRef(undefined);
+  const fanCpuButtonRef = useRef(undefined);
+>>>>>>> 31b0e1b2498278e19c7230602050cd0e80eef67a
 
-  const motherboardHolderClick = (e: any) => {
+  function motherboardHolderClick(e: any) {
     console.log("Selected:  " + selectedId);
     if (selectedId === 1) {
       motherboardButton.current.style.display = "none";
@@ -39,7 +45,7 @@ export default function Game() {
       return;
     }
     setInfo("Vyberte nějakou komponentu!.");
-  };
+  }
 
   const cpuHolderClick = (e: any) => {
     console.log("Selected: " + selectedId);
@@ -61,6 +67,7 @@ export default function Game() {
     setInfo("Vyberte nějakou komponentu.");
   };
 
+<<<<<<< HEAD
   const cpuFanHolderClick = (e: any) => {
     console.log("Selected: " + selectedId);
     console.log(placed["1"]);
@@ -77,10 +84,7 @@ export default function Game() {
     }
     if (!placed["2"]) {
       return setInfo("Vložte prvně procesor");
-    }
-    setInfo("Vyberte nějakou komponentu.");
-  };
-
+=======
  const fanCpuHolderClick = (e: any) => {
     console.log("Selected: " + selectedId);
     console.log(placed["2"]);
@@ -96,6 +100,7 @@ export default function Game() {
     }
     if (!placed["1"]) {
       return setInfo("Vložte prvně základní desku");
+>>>>>>> 31b0e1b2498278e19c7230602050cd0e80eef67a
     }
     setInfo("Vyberte nějakou komponentu.");
   };
