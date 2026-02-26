@@ -23,7 +23,6 @@ export default function Game() {
   const cpuFanHolderRef = useRef(undefined);
   const motherboardButton = useRef(undefined);
   const cpuButton = useRef(undefined);
-  const cpuFanButton = useRef(undefined);
 
   const motherboardHolderClick = (e: any) => {
     console.log("Selected:  " + selectedId);
@@ -78,6 +77,25 @@ export default function Game() {
     }
     if (!placed["2"]) {
       return setInfo("Vložte prvně procesor");
+    }
+    setInfo("Vyberte nějakou komponentu.");
+  };
+
+ const fanCpuHolderClick = (e: any) => {
+    console.log("Selected: " + selectedId);
+    console.log(placed["2"]);
+    if (selectedId === 3 && placed["1"] === true) {
+      fanCpuButtonRef.current.style.display = "none";
+      setPlaced({ ...placed, 3: true });
+      fanCpuHolderRef.current.style.background = "url('/src/Images/fan.png')";
+      fanCpuHolderRef.current.style.backgroundRepeat = "no-repeat";
+      fanCpuHolderRef.current.style.backgroundSize = "contain";
+      fanCpuHolderRef.current.style.border = "none";
+      setInfo("Chladic vložen.");
+      return;
+    }
+    if (!placed["1"]) {
+      return setInfo("Vložte prvně základní desku");
     }
     setInfo("Vyberte nějakou komponentu.");
   };
