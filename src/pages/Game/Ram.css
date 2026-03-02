@@ -1,11 +1,11 @@
-  .chladicProcesor {
+.ram {
     width: 120px;
     height: 500px;
     position: absolute;
-    top: 400px;
-    left: 50px;
+    top: 561px;
+    left: 44px;
     z-index: 6;
-    background: url("../../Images/fan_cpu.png");
+    background: url("../../Images/ram_outside.png");
     background-repeat: no-repeat;
     background-size: contain;
     transition:
@@ -15,13 +15,14 @@
       height 0.5s ease;
   }
 
-  .chladicProcesor img {
+
+  .ram img {
     position: relative;
   }
 
-  .pccase-cpuFan {
-    width: 124px;
-    height: 119px;
-    left: 180px;
-    top: -162px; 
-   }
+  .pccase-ram {
+    width: 39px;
+    height: 140px;
+    left: 300px;
+    top: -316px;
+  }

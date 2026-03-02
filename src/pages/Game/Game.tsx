@@ -3,13 +3,17 @@ import "../Game/Game.css";
 import "../Game/Cpu.css";
 import "../Game/Motherboard.css";
 import "../Game/FanCpu.css";
+import "../Game/Ram.css";
+import "../Game/Power.css";
+import "../Game/Gpu.css";
+import "../Game/Disk.css";
+import "../Game/Fans.css";
 
 import { Link } from "react-router-dom";
-import pccase from "../../Images/case_empty.png";
 
 export default function Game() {
   const [selectedId, setSelectedId] = useState(null);
-  const [info, setInfo] = useState(String);
+  const [info, setInfo] = useState("");
   const [placed, setPlaced] = useState({
     1: false,
     2: false,
@@ -17,93 +21,177 @@ export default function Game() {
     4: false,
     5: false,
     6: false,
+    7: false,
+    8: false,
   });
-  const motherboardHolderRef = useRef(undefined);
-  const cpuHolderRef = useRef(undefined);
-  const cpuFanHolderRef = useRef(undefined);
-  const motherboardButton = useRef(undefined);
-  const cpuButton = useRef(undefined);
-<<<<<<< HEAD
-  const cpuFanButton = useRef(undefined);
-=======
-  const fanCpuHolderRef = useRef(undefined);
-  const fanCpuButtonRef = useRef(undefined);
->>>>>>> 31b0e1b2498278e19c7230602050cd0e80eef67a
 
-  function motherboardHolderClick(e: any) {
-    console.log("Selected:  " + selectedId);
+  const motherboardHolderRef = useRef(null);
+  const cpuHolderRef = useRef(null);
+  const cpuFanHolderRef = useRef(null);
+  const RamHolderRef = useRef(null);
+  const PowerHolderRef = useRef(null);
+  const GpuHolderRef = useRef(null);
+  const DiskHolderRef = useRef(null);
+  const FansHolderRef = useRef(null);
+
+  const motherboardButton = useRef(null);
+  const cpuButton = useRef(null);
+  const cpuFanButton = useRef(null);
+  const RamButton = useRef(null);
+  const PowerButton = useRef(null);
+  const GpuButton = useRef(null);
+  const DiskButton = useRef(null);
+  const FansButton = useRef(null);
+
+  function motherboardHolderClick() {
     if (selectedId === 1) {
       motherboardButton.current.style.display = "none";
       cpuHolderRef.current.style.display = "block";
-      setPlaced({ ...placed, 1: true });
-      motherboardHolderRef.current.style.background =
-        "url('/src/Images/motherboard.png')";
+      setPlaced(prev => ({ ...prev, 1: true }));
+      motherboardHolderRef.current.style.background ="url('/src/Images/motherboard.png')";
       motherboardHolderRef.current.style.backgroundRepeat = "no-repeat";
       motherboardHolderRef.current.style.backgroundSize = "contain";
       motherboardHolderRef.current.style.border = "none";
       setInfo("Základní deska vložena.");
       return;
     }
-    setInfo("Vyberte nějakou komponentu!.");
+    setInfo("Vyberte nějakou komponentu!");
   }
 
-  const cpuHolderClick = (e: any) => {
-    console.log("Selected: " + selectedId);
-    console.log(placed["1"]);
-    if (selectedId === 2 && placed["1"] === true) {
+  function cpuHolderClick() {
+    if (!placed[1]) {
+      setInfo("Vložte prvně základní desku");
+      return;
+    }
+    if (selectedId === 2) {
       cpuButton.current.style.display = "none";
       cpuFanHolderRef.current.style.display = "block";
-      setPlaced({ ...placed, 2: true });
-      cpuHolderRef.current.style.background = "url('/src/Images/cpu.png')";
+      setPlaced(prev => ({ ...prev, 2: true }));
+      cpuHolderRef.current.style.background ="url('/src/Images/cpu.png')";
       cpuHolderRef.current.style.backgroundRepeat = "no-repeat";
       cpuHolderRef.current.style.backgroundSize = "contain";
       cpuHolderRef.current.style.border = "none";
       setInfo("Procesor vložen.");
       return;
     }
-    if (!placed["1"]) {
-      return setInfo("Vložte prvně základní desku");
-    }
     setInfo("Vyberte nějakou komponentu.");
-  };
+  }
 
-<<<<<<< HEAD
-  const cpuFanHolderClick = (e: any) => {
-    console.log("Selected: " + selectedId);
-    console.log(placed["1"]);
-    if (selectedId === 3 && placed["2"] === true) {
+  function cpuFanHolderClick() {
+    if (!placed[2]) {
+      setInfo("Vložte prvně procesor");
+      return;
+    }
+    if (selectedId === 3) {
       cpuFanButton.current.style.display = "none";
-      
-      setPlaced({ ...placed, 3: true });
-      cpuFanHolderRef.current.style.background = "url('/src/Images/fan_cpu.png')";
+      RamHolderRef.current.style.display = "block";
+      setPlaced(prev => ({ ...prev, 3: true }));
+      cpuFanHolderRef.current.style.background ="url('/src/Images/fan_cpu.png')";
       cpuFanHolderRef.current.style.backgroundRepeat = "no-repeat";
       cpuFanHolderRef.current.style.backgroundSize = "contain";
       cpuFanHolderRef.current.style.border = "none";
-      setInfo("Chladiš pro procesor vložen.");
+      setInfo("Chladič pro procesor vložen.");
       return;
-    }
-    if (!placed["2"]) {
-      return setInfo("Vložte prvně procesor");
-=======
- const fanCpuHolderClick = (e: any) => {
-    console.log("Selected: " + selectedId);
-    console.log(placed["2"]);
-    if (selectedId === 3 && placed["1"] === true) {
-      fanCpuButtonRef.current.style.display = "none";
-      setPlaced({ ...placed, 3: true });
-      fanCpuHolderRef.current.style.background = "url('/src/Images/fan.png')";
-      fanCpuHolderRef.current.style.backgroundRepeat = "no-repeat";
-      fanCpuHolderRef.current.style.backgroundSize = "contain";
-      fanCpuHolderRef.current.style.border = "none";
-      setInfo("Chladic vložen.");
-      return;
-    }
-    if (!placed["1"]) {
-      return setInfo("Vložte prvně základní desku");
->>>>>>> 31b0e1b2498278e19c7230602050cd0e80eef67a
     }
     setInfo("Vyberte nějakou komponentu.");
-  };
+  }
+
+  function RamHolderClick() {
+    if (!placed[3]) {
+      setInfo("Vložte prvně procesor");
+      return;
+    }
+    if (selectedId === 4) {
+      RamButton.current.style.display = "none";
+      PowerHolderRef.current.style.display = "block";
+      setPlaced(prev => ({ ...prev, 4: true }));
+      RamHolderRef.current.style.background ="url('/src/Images/ram_inside.png')";
+      RamHolderRef.current.style.backgroundRepeat = "no-repeat";
+      RamHolderRef.current.style.backgroundSize = "contain";
+      RamHolderRef.current.style.border = "none";
+      setInfo("Pamet ram je vložena.");
+      return;
+    }
+    setInfo("Vyberte nějakou komponentu.");
+  }
+
+  function PowerHolderClick() {
+    if (!placed[4]) {
+      setInfo("Vložte prvně procesor");
+      return;
+    }
+    if (selectedId === 5) {
+      PowerButton.current.style.display = "none";
+      GpuHolderRef.current.style.display = "block"; 
+      setPlaced(prev => ({ ...prev, 5: true }));
+      PowerHolderRef.current.style.background ="url('/src/Images/power_inside.png')";
+      PowerHolderRef.current.style.backgroundRepeat = "no-repeat";
+      PowerHolderRef.current.style.backgroundSize = "contain";
+      PowerHolderRef.current.style.border = "none";
+      setInfo("Zdroj je vložen.");
+      return;
+    }
+    setInfo("Vyberte nějakou komponentu.");
+  }
+
+
+  
+  function GpuHolderClick() {
+    if (!placed[5]) {
+      setInfo("Vložte prvně procesor");
+      return;
+    }
+    if (selectedId === 6) {
+      GpuButton.current.style.display = "none";
+      DiskHolderRef.current.style.display = "block";
+      setPlaced(prev => ({ ...prev, 6: true }));
+      GpuHolderRef.current.style.background ="url('/src/Images/gpu.png')";
+      GpuHolderRef.current.style.backgroundRepeat = "no-repeat";
+      GpuHolderRef.current.style.backgroundSize = "contain";
+      GpuHolderRef.current.style.border = "none";
+      setInfo("Graficka karta je vložena.");
+      return;
+    }
+    setInfo("Vyberte nějakou komponentu.");
+  }
+
+  function DiskHolderClick() {
+    if (!placed[6]) {
+      setInfo("Vložte prvně grafickou kartu");
+      return;
+    }
+    if (selectedId === 7) {
+      DiskButton.current.style.display = "none";
+      FansHolderRef.current.style.display = "block";
+      setPlaced(prev => ({ ...prev, 7: true }));
+      DiskHolderRef.current.style.background ="url('/src/Images/disk_inside.png')";
+      DiskHolderRef.current.style.backgroundRepeat = "no-repeat";
+      DiskHolderRef.current.style.backgroundSize = "contain";
+      DiskHolderRef.current.style.border = "none";
+      setInfo("Pevny disk je vloženy.");
+      return;
+    }
+    setInfo("Vyberte nějakou komponentu.");
+  }
+
+  function FansHolderClick() {
+    if (!placed[7]) {
+      setInfo("Vložte prvně grafickou kartu");
+      return;
+    }
+    if (selectedId === 8) {
+      FansButton.current.style.display = "none";
+      //FansHolderRef.current.style.display = "block";
+      setPlaced(prev => ({ ...prev, 8: true }));
+      FansHolderRef.current.style.background ="url('/src/Images/fans_inside.png')";
+      FansHolderRef.current.style.backgroundRepeat = "no-repeat";
+      FansHolderRef.current.style.backgroundSize = "contain";
+      FansHolderRef.current.style.border = "none";
+      setInfo("Vetraky jsou vloženy.");
+      return;
+    }
+    setInfo("Vyberte nějakou komponentu.");
+  }
 
   return (
     <div className="game-wrapper">
@@ -111,102 +199,112 @@ export default function Game() {
         <Link to={"/"}>
           <button className="button">back</button>
         </Link>
+
         <div
           className="zakladniDeska component"
           ref={motherboardButton}
           onClick={() => setSelectedId(1)}
-          style={
-            placed[1]
-              ? {
-                  width: "100px",
-                  height: "50px",
-                }
-              : {}
-          }
-        ></div>
-
-        <div
-          className="mistoProZakladniDesku component"
-          onClick={() => {
-            if (selectedId === 1) {
-              setPlaced((prev) => ({ ...prev, 1: true }));
-              setSelectedId(null);
-            }
-          }}
         ></div>
 
         <div
           className="procesor component"
           ref={cpuButton}
           onClick={() => setSelectedId(2)}
-          style={
-            placed[2]
-              ? {
-                  width: "4.9vw",
-                  height: "10vh",
-                 
-                }
-              : {}
-          }
-        ></div>
-
-        <div
-          className="mistoProProcesor component"
-          onClick={() => {
-            if (selectedId === 2) {
-              setPlaced((prev) => ({ ...prev, 2: true }));
-              setSelectedId(null);
-            }
-          }}
         ></div>
 
         <div
           className="chladicProcesor component"
           ref={cpuFanButton}
           onClick={() => setSelectedId(3)}
-          style={
-            placed[3]
-              ? {
-                  width: "9vw",
-                  height: "15vh",
-                  
-                }
-              : {}
-          }
         ></div>
 
         <div
-          className="mistoProChladicProcesor component"
-          onClick={() => {
-            if (selectedId === 3) {
-              setPlaced((prev) => ({ ...prev, 3: true }));
-              setSelectedId(null);
-            }
-          }}
+          className="ram component"
+          ref={RamButton}
+          onClick={() => setSelectedId(4)}
         ></div>
+
+        <div
+          className="zdroj component"
+          ref={PowerButton}
+          onClick={() => setSelectedId(5)}
+        ></div>
+        
+        <div
+          className="gpu component"
+          ref={GpuButton}
+          onClick={() => setSelectedId(6)}
+        ></div>
+        
+        <div
+          className="disk component"
+          ref={DiskButton}
+          onClick={() => setSelectedId(7)}
+        ></div>
+        <div
+          className="fans component"
+          ref={FansButton}
+          onClick={() => setSelectedId(8)}
+        ></div>
+
         <p className="game-info">{info}</p>
       </div>
+
       <div className="wrapper">
         <div
           onClick={motherboardHolderClick}
           ref={motherboardHolderRef}
           className="pccase-component pccase-motherboard"
         ></div>
+
         <div
           onClick={cpuHolderClick}
           ref={cpuHolderRef}
           className="pccase-component pccase-cpu"
           style={{ display: "none" }}
         ></div>
+
         <div
           onClick={cpuFanHolderClick}
           ref={cpuFanHolderRef}
           className="pccase-component pccase-cpuFan"
           style={{ display: "none" }}
         ></div>
+
+          <div
+          onClick={RamHolderClick}
+          ref={RamHolderRef}
+          className="pccase-component pccase-ram"
+          style={{ display: "none" }}
+        ></div>
+        
+        <div
+          onClick={PowerHolderClick}
+          ref={PowerHolderRef}
+          className="pccase-component pccase-power"
+          style={{ display: "none" }}
+        ></div> 
+        <div
+          onClick={GpuHolderClick}
+          ref={GpuHolderRef}
+          className="pccase-component pccase-gpu"
+          style={{ display: "none" }}
+        ></div>
+        
+        <div
+          onClick={DiskHolderClick}
+          ref={DiskHolderRef}
+          className="pccase-component pccase-disk"
+          style={{ display: "none" }}
+        ></div>
+
+        <div
+          onClick={FansHolderClick}
+          ref={FansHolderRef}
+          className="pccase-component pccase-fans"
+          style={{ display: "none" }}
+        ></div>
       </div>
     </div>
   );
 }
-
-//<img src={pccase} alt="pccase" className="pccase" />

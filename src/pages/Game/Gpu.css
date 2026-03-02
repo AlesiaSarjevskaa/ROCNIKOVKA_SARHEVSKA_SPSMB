@@ -1,11 +1,11 @@
-  .chladicProcesor {
+.gpu {
     width: 120px;
-    height: 500px;
+    height: 100px;
     position: absolute;
-    top: 400px;
+    top: 800px;
     left: 50px;
-    z-index: 6;
-    background: url("../../Images/fan_cpu.png");
+    z-index: 3;
+    background: url("../../Images/gpu.png");
     background-repeat: no-repeat;
     background-size: contain;
     transition:
@@ -14,14 +14,13 @@
       width 0.5s ease,
       height 0.5s ease;
   }
-
-  .chladicProcesor img {
+  .gpu img {
     position: relative;
   }
-
-  .pccase-cpuFan {
-    width: 124px;
-    height: 119px;
-    left: 180px;
-    top: -162px; 
-   }
+  
+  .pccase-gpu {
+    width: 219px;
+    height: 121px;
+    left: 64px;
+    top: -434px;
+  }

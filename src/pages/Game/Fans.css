@@ -1,11 +1,11 @@
-  .chladicProcesor {
+.fans {
     width: 120px;
-    height: 500px;
+    height: 120px;
     position: absolute;
-    top: 400px;
-    left: 50px;
+    top: 700px;
+    left: 205px;
     z-index: 6;
-    background: url("../../Images/fan_cpu.png");
+    background: url("../../Images/fans.png");
     background-repeat: no-repeat;
     background-size: contain;
     transition:
@@ -15,13 +15,14 @@
       height 0.5s ease;
   }
 
-  .chladicProcesor img {
+
+  .fans img {
     position: relative;
   }
 
-  .pccase-cpuFan {
-    width: 124px;
-    height: 119px;
-    left: 180px;
-    top: -162px; 
-   }
+  .pccase-fans {
+    width: 105px;
+    height: 145px;
+    left: 52px;
+    top: -864px;
+  }

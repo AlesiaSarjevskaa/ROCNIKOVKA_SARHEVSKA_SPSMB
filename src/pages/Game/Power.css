@@ -1,0 +1,26 @@
+.zdroj {
+  width: 120px;
+  height: 100px;
+  position: absolute;
+  top: 654px;
+  left: 50px;
+  z-index: 3;
+  background: url("../../Images/power.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition:
+    top 0.5s ease,
+    left 0.5s ease,
+    width 0.5s ease,
+    height 0.5s ease;
+}
+.zdroj img {
+  position: relative;
+}
+
+.pccase-power {
+    width: 177px;
+    height: 138px;
+    left: 87px;
+    top: -204px;
+}
