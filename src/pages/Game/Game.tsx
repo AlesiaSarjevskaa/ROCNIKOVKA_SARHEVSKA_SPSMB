@@ -8,12 +8,15 @@ import "../Game/Power.css";
 import "../Game/Gpu.css";
 import "../Game/Disk.css";
 import "../Game/Fans.css";
+import "../Game/Images.css";
+import table from "../../Images/table1.png";
+
 
 import { Link } from "react-router-dom";
 
 export default function Game() {
   const [selectedId, setSelectedId] = useState(null);
-  const [info, setInfo] = useState("");
+  const [info, setInfo] = useState("vlozete zakladni desku");
   const [placed, setPlaced] = useState({
     1: false,
     2: false,
@@ -43,7 +46,7 @@ export default function Game() {
   const DiskButton = useRef(null);
   const FansButton = useRef(null);
 
-  function motherboardHolderClick() {
+  function motherboardHolderClick() {     
     if (selectedId === 1) {
       motherboardButton.current.style.display = "none";
       cpuHolderRef.current.style.display = "block";
@@ -53,6 +56,10 @@ export default function Game() {
       motherboardHolderRef.current.style.backgroundSize = "contain";
       motherboardHolderRef.current.style.border = "none";
       setInfo("Základní deska vložena.");
+
+      setTimeout(() => {
+      setInfo("Vložte chladič procesoru.");
+      }, 1200);
       return;
     }
     setInfo("Vyberte nějakou komponentu!");
@@ -63,6 +70,7 @@ export default function Game() {
       setInfo("Vložte prvně základní desku");
       return;
     }
+
     if (selectedId === 2) {
       cpuButton.current.style.display = "none";
       cpuFanHolderRef.current.style.display = "block";
@@ -199,7 +207,7 @@ export default function Game() {
         <Link to={"/"}>
           <button className="button">back</button>
         </Link>
-
+        <img className="table" src={table} alt="table" />
         <div
           className="zakladniDeska component"
           ref={motherboardButton}
