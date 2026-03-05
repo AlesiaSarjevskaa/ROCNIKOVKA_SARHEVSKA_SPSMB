@@ -11,6 +11,7 @@
   0 0 120px rgba(127, 136, 142, 0.731);
   border-radius: 12px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 5px solid grey;
 }
 
 .table:hover {
