@@ -1,19 +1,36 @@
   .chladicProcesor {
-    width: 120px;
-    height: 500px;
+    width: 100px;
+    height: 100px;
     position: absolute;
-    top: 400px;
-    left: 50px;
+    top: 247px;
+    left: 250px;
     z-index: 6;
     background: url("../../Images/fan_cpu.png");
     background-repeat: no-repeat;
     background-size: contain;
-    transition:
-      top 0.5s ease,
-      left 0.5s ease,
-      width 0.5s ease,
-      height 0.5s ease;
-  }
+    border: 2px solid #1f7a1f;
+  border-radius: 8px;
+
+  box-shadow:
+    0 0 8px rgba(31, 122, 31, 0.6),
+    inset 0 0 6px rgba(31, 122, 31, 0.4);
+
+  transition:
+    top 0.5s ease,
+    left 0.5s ease,
+    width 0.5s ease,
+    height 0.5s ease,
+    box-shadow 0.3s ease,
+    transform 0.2s ease;
+}
+
+.chladicProcesor:hover {
+  transform: scale(1.08);
+  box-shadow:
+    0 0 14px rgba(31, 122, 31, 0.9),
+    inset 0 0 8px rgba(31, 122, 31, 0.5);
+}
+
 
   .chladicProcesor img {
     position: relative;

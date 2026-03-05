@@ -1,23 +1,23 @@
 .table {
-    width: 500px; 
-    height: 800px;
-    position: relative;
-    top: 64px;
-    left: 14px;
-    z-index: 1;
-    box-shadow:
-      0 0 40px rgba(255, 255, 255, 0.15),
-      0 25px 60px rgba(0, 0, 0, 0.9),
-      0 0 80px rgba(0, 150, 255, 0.25);
-    border-radius: 12px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 200px; 
+  height: 800px;
+  position: relative;
+  top: 38px;
+  left: 200px;
+  z-index: 1;
+  box-shadow:
+  0 0 60px rgba(79, 115, 71, 0.701),
+  0 35px 80px rgba(0, 0, 0, 1),
+  0 0 120px rgba(127, 136, 142, 0.731);
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-  }
-  
-  .table:hover {
-    transform: scale(1.02);
-    box-shadow:
-      0 0 60px rgba(255, 255, 255, 0.25),
-      0 35px 80px rgba(0, 0, 0, 1),
-      0 0 120px rgba(0, 150, 255, 0.35);
-  }
+.table:hover {
+  transform: scale(1.02);
+  box-shadow:
+  0 0 40px rgba(255, 255, 255, 0.15),
+  0 25px 60px rgba(12, 54, 4, 0.9),
+  0 0 80px rgba(101, 197, 76, 0.489);
+}
+

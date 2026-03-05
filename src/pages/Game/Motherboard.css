@@ -1,26 +1,45 @@
-  .zakladniDeska {
-    width: 120px;
-    height: 100px;
-    position: absolute;
-    top: 300px;
-    left: 50px;
-    z-index: 3;
-    background: url("../../Images/motherboard.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    transition:
-      top 0.5s ease,
-      left 0.5s ease,
-      width 0.5s ease,
-      height 0.5s ease;
-  }
-  .zakladniDeska img {
-    position: relative;
-  }
+.zakladniDeska {
+  width: 90px;
+  height: 100px;
+  position: absolute;
+  top: 116px;
+  left: 250px;
+  z-index: 3;
+  background: url("../../Images/motherboard.png");
+  background-repeat: no-repeat;
+  background-size: contain;
 
-  .pccase-motherboard {
-    width: 228px;
-    height: 234px;
-    left: 139px;
-    top: 78px;
-  }
+  border: 2px solid #1f7a1f;
+  border-radius: 8px;
+
+  box-shadow:
+    0 0 8px rgba(31, 122, 31, 0.6),
+    inset 0 0 6px rgba(31, 122, 31, 0.4);
+
+  transition:
+    top 0.5s ease,
+    left 0.5s ease,
+    width 0.5s ease,
+    height 0.5s ease,
+    box-shadow 0.3s ease,
+    transform 0.2s ease;
+}
+
+.zakladniDeska:hover {
+  transform: scale(1.08);
+  box-shadow:
+    0 0 14px rgba(31, 122, 31, 0.9),
+    inset 0 0 8px rgba(31, 122, 31, 0.5);
+}
+
+
+.zakladniDeska img {
+  position: relative;
+}
+
+.pccase-motherboard {
+  width: 228px;
+  height: 234px;
+  left: 139px;
+  top: 78px;
+}

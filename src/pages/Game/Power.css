@@ -1,26 +1,44 @@
 .zdroj {
   width: 120px;
-  height: 100px;
+  height: 85px;
   position: absolute;
-  top: 654px;
-  left: 50px;
+  top: 574px;
+  left: 250px;
   z-index: 3;
   background: url("../../Images/power.png");
   background-repeat: no-repeat;
   background-size: contain;
+
+  border: 2px solid #1f7a1f;
+  border-radius: 8px;
+
+  box-shadow:
+    0 0 8px rgba(31, 122, 31, 0.6),
+    inset 0 0 6px rgba(31, 122, 31, 0.4);
+
   transition:
     top 0.5s ease,
     left 0.5s ease,
     width 0.5s ease,
-    height 0.5s ease;
+    height 0.5s ease,
+    box-shadow 0.3s ease,
+    transform 0.2s ease;
 }
+
+.zdroj:hover {
+  transform: scale(1.08);
+  box-shadow:
+    0 0 14px rgba(31, 122, 31, 0.9),
+    inset 0 0 8px rgba(31, 122, 31, 0.5);
+}
+
 .zdroj img {
   position: relative;
 }
 
 .pccase-power {
-    width: 177px;
-    height: 138px;
-    left: 87px;
-    top: -204px;
+  width: 177px;
+  height: 138px;
+  left: 87px;
+  top: -204px;
 }

@@ -50,17 +50,19 @@
   z-index: 2;
   transition: background-color 0.3s ease;
   cursor: pointer;
-  border: 3px solid rgba(204, 27, 27, 0.8);
+  /*border: 3px solid  rgba(31, 122, 31, 0.9);*/
 }
 
 .pccase-component:hover {
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(31, 122, 31, 0.447);
 }
 
 .game-info {
-  top: 37px;
-  left: 1145px;
-  color: white;
+  top: 552px;
+  left: 607px;
   position: fixed;
-  font-size: 52px;
+  font-size: 60px;
+  color: #2c932c; /* tmavší zelená */
+  font-family: "Bangers", "Trebuchet MS", sans-serif;
+  text-shadow: 2px 2px 6px rgb(114, 121, 113);
 }

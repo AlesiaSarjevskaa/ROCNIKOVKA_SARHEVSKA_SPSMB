@@ -1,19 +1,36 @@
 .gpu {
-    width: 120px;
-    height: 100px;
+    width: 130px;
+    height: 65px;
     position: absolute;
-    top: 800px;
-    left: 50px;
+    top: 769px;
+    left: 250px;
     z-index: 3;
     background: url("../../Images/gpu.png");
     background-repeat: no-repeat;
     background-size: contain;
-    transition:
-      top 0.5s ease,
-      left 0.5s ease,
-      width 0.5s ease,
-      height 0.5s ease;
-  }
+    border: 2px solid #1f7a1f;
+  border-radius: 8px;
+
+  box-shadow:
+    0 0 8px rgba(31, 122, 31, 0.6),
+    inset 0 0 6px rgba(31, 122, 31, 0.4);
+
+  transition:
+    top 0.5s ease,
+    left 0.5s ease,
+    width 0.5s ease,
+    height 0.5s ease,
+    box-shadow 0.3s ease,
+    transform 0.2s ease;
+}
+
+.gpu:hover {
+  transform: scale(1.08);
+  box-shadow:
+    0 0 14px rgba(31, 122, 31, 0.9),
+    inset 0 0 8px rgba(31, 122, 31, 0.5);
+}
+
   .gpu img {
     position: relative;
   }

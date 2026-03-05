@@ -207,7 +207,7 @@ export default function Game() {
         <Link to={"/"}>
           <button className="button">back</button>
         </Link>
-        <img className="table" src={table} alt="table" />
+        <div className="table"></div>
         <div
           className="zakladniDeska component"
           ref={motherboardButton}
