@@ -9,12 +9,19 @@ import "../Game/Gpu.css";
 import "../Game/Disk.css";
 import "../Game/Fans.css";
 import "../Game/Images.css";
+import planktonMotherboard from "../../Images/plankton/without_bg/plankton_motherboard.png";
+import planktonHdd from "../../Images/plankton/without_bg/plankton_hdd.png";
 
 import { Link } from "react-router-dom";
 
 export default function Game() {
   const [selectedId, setSelectedId] = useState(null);
   const [info, setInfo] = useState("Všechno začíná u mámy – vlož MOTHERbord!");
+  const [planktonImg, setPlanktonImg] = useState([
+    planktonMotherboard,
+    planktonHdd,
+  ]);
+  const [planktonCounter, setPlanktonCounter] = useState(0);
   const [placed, setPlaced] = useState({
     1: false,
     2: false,
@@ -57,6 +64,7 @@ export default function Game() {
       motherboardHolderRef.current.style.border = "none";
 
       setInfo("Superrrr!");
+      setPlanktonCounter(planktonCounter + 1);
       setTimeout(() => {
         setInfo(
           "Mozek operace je tady – dej tam CPU, ať se nám to myslí samo."
@@ -288,6 +296,11 @@ export default function Game() {
         ></div>
 
         <p className="game-info">{info}</p>
+        <img
+          className="plankton"
+          src={planktonImg[planktonCounter]}
+          alt="plankton"
+        />
       </div>
 
       <div className="wrapper">
