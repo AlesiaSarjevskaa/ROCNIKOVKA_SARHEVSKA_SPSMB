@@ -65,7 +65,7 @@ button:hover {
    -webkit-text-stroke: 3px rgb(60, 155, 127);
 }
 
-.plankton {
+.plankton_home {
   position: fixed;
   right: 20px;
   top: 50%;

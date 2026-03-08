@@ -10,7 +10,14 @@ import "../Game/Disk.css";
 import "../Game/Fans.css";
 import "../Game/Images.css";
 import planktonMotherboard from "../../Images/plankton/without_bg/plankton_motherboard.png";
-import planktonHdd from "../../Images/plankton/without_bg/plankton_hdd.png";
+import planktonCpu from "../../Images/plankton/without_bg/plankton_classical1.png";
+import planktonCpuFan from "../../Images/plankton/without_bg/plankton_classical2.png";
+import planktonRam from "../../Images/plankton/without_bg/plankton_classical3.png";
+import planktonPower from "../../Images/plankton/without_bg/plankton_power.png";
+import planktonGpu from "../../Images/plankton/without_bg/plankton_classical1.png";
+import planktonDisk from "../../Images/plankton/without_bg/plankton_classical5.png";
+import planktonFans from "../../Images/plankton/without_bg/plankton_classical1.png";
+
 
 import { Link } from "react-router-dom";
 
@@ -19,7 +26,13 @@ export default function Game() {
   const [info, setInfo] = useState("Všechno začíná u mámy – vlož MOTHERbord!");
   const [planktonImg, setPlanktonImg] = useState([
     planktonMotherboard,
-    planktonHdd,
+    planktonCpu,
+    planktonCpuFan,
+    planktonRam,
+    planktonPower,
+    planktonGpu,
+    planktonDisk,
+    planktonFans,
   ]);
   const [planktonCounter, setPlanktonCounter] = useState(0);
   const [placed, setPlaced] = useState({
@@ -64,12 +77,13 @@ export default function Game() {
       motherboardHolderRef.current.style.border = "none";
 
       setInfo("Superrrr!");
-      setPlanktonCounter(planktonCounter + 1);
+
       setTimeout(() => {
         setInfo(
           "Mozek operace je tady – dej tam CPU, ať se nám to myslí samo."
         );
       }, 1200);
+      setPlanktonCounter(planktonCounter + 1);
       return;
     }
     setInfo("To asi neni to co potrebujes");
@@ -90,6 +104,8 @@ export default function Game() {
       cpuHolderRef.current.style.border = "none";
 
       setInfo("Superrrr!");
+      setPlanktonCounter(planktonCounter + 1);
+
       setTimeout(() => {
         setInfo("Mozek se zahřívá, dej mu FANCPU, ať nevypukne chaos.");
       }, 1200);
@@ -114,6 +130,8 @@ export default function Game() {
       cpuFanHolderRef.current.style.border = "none";
 
       setInfo("Superrrr!");
+      setPlanktonCounter(planktonCounter + 1);
+
       setTimeout(() => {
         setInfo("Krabice na myšlenky – přidej RAM, ať si všechno pamatuje.");
       }, 1200);
@@ -138,6 +156,8 @@ export default function Game() {
       RamHolderRef.current.style.border = "none";
 
       setInfo("Superrrr!");
+      setPlanktonCounter(planktonCounter + 1);
+
       setTimeout(() => {
         setInfo("Energie pro všechny bláznivosti – zapoj POWER.");
       }, 1200);
@@ -162,6 +182,8 @@ export default function Game() {
       PowerHolderRef.current.style.border = "none";
 
       setInfo("Superrrr!");
+      setPlanktonCounter(planktonCounter + 1);
+
       setTimeout(() => {
         setInfo("Obrázky potřebují kouzlo – vlož GPU a bude to k popukání.");
       }, 1200);
@@ -185,6 +207,8 @@ export default function Game() {
       GpuHolderRef.current.style.border = "none";
 
       setInfo("Superrrr!");
+      setPlanktonCounter(planktonCounter + 1);
+
       setTimeout(() => {
         setInfo("Paměť, kam schováme všechnu šílenost – dej tam disk.");
       }, 1200);
@@ -209,6 +233,8 @@ export default function Game() {
       DiskHolderRef.current.style.border = "none";
 
       setInfo("Superrrr!");
+      setPlanktonCounter(planktonCounter + 1);
+
       setTimeout(() => {
         setInfo("Nech to dýchat – FANy to rozfouknou správným směrem.");
       }, 1200);
@@ -232,6 +258,8 @@ export default function Game() {
       FansHolderRef.current.style.border = "none";
 
       setInfo("Superrrr!");
+      setPlanktonCounter(planktonCounter + 1);
+
       setTimeout(() => {
         setInfo("Všechno zapojeno, ventilátory točí, mozky běží – PC je live!");
       }, 1200);
@@ -297,7 +325,7 @@ export default function Game() {
 
         <p className="game-info">{info}</p>
         <img
-          className="plankton"
+          className="plankton_game"
           src={planktonImg[planktonCounter]}
           alt="plankton"
         />

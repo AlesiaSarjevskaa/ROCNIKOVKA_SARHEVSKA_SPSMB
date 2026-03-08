@@ -31,10 +31,12 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
+  position: relative;
 }
 
 .component {
   cursor: pointer;
+  
 }
 
 .components-wrapper {

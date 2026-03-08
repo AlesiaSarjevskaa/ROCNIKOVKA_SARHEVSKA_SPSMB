@@ -1,7 +1,7 @@
-https://i.pinimg.com/736x/19/9a/99/199a99642dca719f66f162388b12b217.jpg
-https://i.pinimg.com/736x/26/95/b5/2695b573568e5c543a498ef586bd636a.jpg
-https://i.pinimg.com/736x/70/5f/f4/705ff4ea7a7c2d24a894c8b8ed89d3a8.jpg
-https://i.pinimg.com/736x/72/c3/3d/72c33dba5b442b34a62a7dff4d3ae8ad.jpg
-https://i.pinimg.com/736x/d1/6e/20/d16e20e2ba2d52bea1614678a7727eea.jpg
+hdd -> https://i.pinimg.com/736x/19/9a/99/199a99642dca719f66f162388b12b217.jpg
+power -> https://i.pinimg.com/1200x/29/2f/30/292f3040b26f4083a8d2a7fcb568d905.jpg
+gpu -> motherboard -> https://i.pinimg.com/736x/72/c3/3d/72c33dba5b442b34a62a7dff4d3ae8ad.jpg
+error -> https://i.pinimg.com/736x/d1/6e/20/d16e20e2ba2d52bea1614678a7727eea.jpg
 https://i.pinimg.com/1200x/b0/d1/f4/b0d1f41cb15d5aeb4616017db5110a22.jpg
-https://i.pinimg.com/736x/25/fd/b7/25fdb723063389b7305c25618b9b3707.jpg
+super -> https://i.pinimg.com/736x/25/fd/b7/25fdb723063389b7305c25618b9b3707.jpg
+cpuFan -> https://i.pinimg.com/736x/42/b0/a8/42b0a8920bd185625499ea785dad46ed.jpg

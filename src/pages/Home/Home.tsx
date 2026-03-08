@@ -27,7 +27,7 @@ export default function Home() {
           </div>
           </Link>
         <div id="plankton_1">
-          <img className="plankton" src={plankton} alt="plankton" />
+          <img className="plankton_home" src={plankton} alt="plankton" />
         </div>
       </div>
     </>
