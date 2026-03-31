@@ -18,7 +18,6 @@ import planktonGpu from "../../Images/plankton/without_bg/plankton_classical1.pn
 import planktonDisk from "../../Images/plankton/without_bg/plankton_classical5.png";
 import planktonFans from "../../Images/plankton/without_bg/plankton_classical1.png";
 
-
 import { Link } from "react-router-dom";
 
 export default function Game() {
@@ -275,53 +274,54 @@ export default function Game() {
         <Link to={"/"}>
           <button className="button">back</button>
         </Link>
-        <div className="table"></div>
-        <div
-          className="zakladniDeska component"
-          ref={motherboardButton}
-          onClick={() => setSelectedId(1)}
-        ></div>
+        <div className="table">
+          <div
+            className="zakladniDeska component"
+            ref={motherboardButton}
+            onClick={() => setSelectedId(1)}
+          ></div>
 
-        <div
-          className="procesor component"
-          ref={cpuButton}
-          onClick={() => setSelectedId(2)}
-        ></div>
+          <div
+            className="procesor component"
+            ref={cpuButton}
+            onClick={() => setSelectedId(2)}
+          ></div>
 
-        <div
-          className="chladicProcesor component"
-          ref={cpuFanButton}
-          onClick={() => setSelectedId(3)}
-        ></div>
+          <div
+            className="chladicProcesor component"
+            ref={cpuFanButton}
+            onClick={() => setSelectedId(3)}
+          ></div>
 
-        <div
-          className="ram component"
-          ref={RamButton}
-          onClick={() => setSelectedId(4)}
-        ></div>
+          <div
+            className="ram component"
+            ref={RamButton}
+            onClick={() => setSelectedId(4)}
+          ></div>
 
-        <div
-          className="zdroj component"
-          ref={PowerButton}
-          onClick={() => setSelectedId(5)}
-        ></div>
+          <div
+            className="zdroj component"
+            ref={PowerButton}
+            onClick={() => setSelectedId(5)}
+          ></div>
 
-        <div
-          className="gpu component"
-          ref={GpuButton}
-          onClick={() => setSelectedId(6)}
-        ></div>
+          <div
+            className="gpu component"
+            ref={GpuButton}
+            onClick={() => setSelectedId(6)}
+          ></div>
 
-        <div
-          className="disk component"
-          ref={DiskButton}
-          onClick={() => setSelectedId(7)}
-        ></div>
-        <div
-          className="fans component"
-          ref={FansButton}
-          onClick={() => setSelectedId(8)}
-        ></div>
+          <div
+            className="disk component"
+            ref={DiskButton}
+            onClick={() => setSelectedId(7)}
+          ></div>
+          <div
+            className="fans component"
+            ref={FansButton}
+            onClick={() => setSelectedId(8)}
+          ></div>
+        </div>
 
         <p className="game-info">{info}</p>
         <img

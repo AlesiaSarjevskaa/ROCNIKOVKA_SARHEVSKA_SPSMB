@@ -1,14 +1,14 @@
 .disk {
-    width: 100px;
-    height: 80px;
-    position: absolute;
-    top: 380px;
-    left: 250px;
-    z-index: 6;
-    background: url("../../Images/disk.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    border: 2px solid #1f7a1f;
+  width: 100px;
+  height: 80px;
+  position: absolute;
+  top: 10px;
+  left: 145px;
+  z-index: 6;
+  background: url("../../Images/disk.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: 2px solid #1f7a1f;
   border-radius: 8px;
 
   box-shadow:
@@ -31,15 +31,13 @@
     inset 0 0 8px rgba(31, 122, 31, 0.5);
 }
 
+.disk img {
+  position: relative;
+}
 
-
-  .disk img {
-    position: relative;
-  }
-
-  .pccase-disk {
-    width: 100px;
-    height: 140px;
-    left: 405px;
-    top: -614px;
-  }
+.pccase-disk {
+  width: 100px;
+  height: 140px;
+  left: 405px;
+  top: -614px;
+}

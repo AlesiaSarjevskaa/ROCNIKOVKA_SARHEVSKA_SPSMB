@@ -1,14 +1,14 @@
 .fans {
-    width: 100px;
-    height: 65px;
-    position: absolute;
-    top: 684px;
-    left: 250px;
-    z-index: 6;
-    background: url("../../Images/fans.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    border: 2px solid #1f7a1f;
+  width: 100px;
+  height: 65px;
+  position: absolute;
+  top: 330px;
+  left: 113px;
+  z-index: 6;
+  background: url("../../Images/fans.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: 2px solid #1f7a1f;
   border-radius: 8px;
 
   box-shadow:
@@ -31,14 +31,13 @@
     inset 0 0 8px rgba(31, 122, 31, 0.5);
 }
 
+.fans img {
+  position: relative;
+}
 
-  .fans img {
-    position: relative;
-  }
-
-  .pccase-fans {
-    width: 105px;
-    height: 145px;
-    left: 52px;
-    top: -864px;
-  }
+.pccase-fans {
+  width: 105px;
+  height: 145px;
+  left: 52px;
+  top: -864px;
+}

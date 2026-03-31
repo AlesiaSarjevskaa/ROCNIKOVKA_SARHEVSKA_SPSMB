@@ -24,6 +24,7 @@
   position: relative;
   height: 100%;
   width: 100%;
+ 
 }
 
 .game-wrapper {
@@ -68,3 +69,22 @@
   font-family: "Bangers", "Trebuchet MS", sans-serif;
   text-shadow: 2px 2px 6px rgb(114, 121, 113);
 }
+
+@media (max-width: 1276px) {
+  .wrapper {
+    left: 200px;
+  }
+  .plankton_game {
+    display: none;
+  }
+  .game-info {
+    top: 500px;
+    left: 500px;
+    position: fixed;
+    font-size: 30px;
+    color: #2c932c; /* tmavší zelená */
+    font-family: "Bangers", "Trebuchet MS", sans-serif;
+    text-shadow: 2px 2px 6px rgb(114, 121, 113);
+  }
+}
+

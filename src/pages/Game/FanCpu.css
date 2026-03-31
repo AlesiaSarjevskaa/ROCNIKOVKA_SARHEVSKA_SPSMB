@@ -1,9 +1,9 @@
   .chladicProcesor {
-    width: 100px;
-    height: 100px;
+    width: 85px;
+    height: 85px;
     position: absolute;
-    top: 247px;
-    left: 250px;
+    top: 130px;
+    left: 280px;
     z-index: 6;
     background: url("../../Images/fan_cpu.png");
     background-repeat: no-repeat;

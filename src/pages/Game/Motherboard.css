@@ -1,9 +1,9 @@
 .zakladniDeska {
-  width: 90px;
-  height: 100px;
+  width: 150px;
+  height: 160px;
   position: absolute;
-  top: 116px;
-  left: 250px;
+  top: 125px;
+  left: 59px;
   z-index: 3;
   background: url("../../Images/motherboard.png");
   background-repeat: no-repeat;
@@ -32,7 +32,6 @@
     inset 0 0 8px rgba(31, 122, 31, 0.5);
 }
 
-
 .zakladniDeska img {
   position: relative;
 }
@@ -43,3 +42,4 @@
   left: 139px;
   top: 78px;
 }
+

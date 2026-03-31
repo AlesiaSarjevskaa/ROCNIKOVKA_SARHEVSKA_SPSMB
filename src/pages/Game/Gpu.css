@@ -1,14 +1,14 @@
 .gpu {
-    width: 130px;
-    height: 65px;
-    position: absolute;
-    top: 769px;
-    left: 250px;
-    z-index: 3;
-    background: url("../../Images/gpu.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    border: 2px solid #1f7a1f;
+  width: 130px;
+  height: 65px;
+  position: absolute;
+  top: 400px;
+  left: 250px;
+  z-index: 3;
+  background: url("../../Images/gpu.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: 2px solid #1f7a1f;
   border-radius: 8px;
 
   box-shadow:
@@ -31,13 +31,13 @@
     inset 0 0 8px rgba(31, 122, 31, 0.5);
 }
 
-  .gpu img {
-    position: relative;
-  }
-  
-  .pccase-gpu {
-    width: 219px;
-    height: 121px;
-    left: 64px;
-    top: -434px;
-  }
+.gpu img {
+  position: relative;
+}
+
+.pccase-gpu {
+  width: 219px;
+  height: 121px;
+  left: 64px;
+  top: -434px;
+}

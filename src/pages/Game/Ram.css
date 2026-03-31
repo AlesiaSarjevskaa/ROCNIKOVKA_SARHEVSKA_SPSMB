@@ -1,14 +1,14 @@
 .ram {
-    width: 100px;
-    height: 65px;
-    position: absolute;
-    top: 480px;
-    left: 250px;
-    z-index: 6;
-    background: url("../../Images/ram_outside.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    border: 2px solid #1f7a1f;
+  width: 100px;
+  height: 65px;
+  position: absolute;
+  top: 35px;
+  left: 275px;
+  z-index: 6;
+  background: url("../../Images/ram_outside.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: 2px solid #1f7a1f;
   border-radius: 8px;
 
   box-shadow:
@@ -31,15 +31,13 @@
     inset 0 0 8px rgba(31, 122, 31, 0.5);
 }
 
+.ram img {
+  position: relative;
+}
 
-
-  .ram img {
-    position: relative;
-  }
-
-  .pccase-ram {
-    width: 39px;
-    height: 140px;
-    left: 300px;
-    top: -316px;
-  }
+.pccase-ram {
+  width: 39px;
+  height: 140px;
+  left: 300px;
+  top: -316px;
+}
