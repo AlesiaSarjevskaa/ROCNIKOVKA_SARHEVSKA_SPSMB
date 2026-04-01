@@ -42,3 +42,11 @@
   left: 234px;
   top: -109px;
 }
+
+@media (max-width: 1276px) {
+  .procesor {
+    left: 10px;
+    width: 30px;
+    height: 30px;
+  }
+}

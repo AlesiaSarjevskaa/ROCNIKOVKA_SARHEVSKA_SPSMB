@@ -1,14 +1,14 @@
-  .chladicProcesor {
-    width: 85px;
-    height: 85px;
-    position: absolute;
-    top: 130px;
-    left: 280px;
-    z-index: 6;
-    background: url("../../Images/fan_cpu.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    border: 2px solid #1f7a1f;
+.chladicProcesor {
+  width: 85px;
+  height: 85px;
+  position: absolute;
+  top: 130px;
+  left: 280px;
+  z-index: 6;
+  background: url("../../Images/fan_cpu.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: 2px solid #1f7a1f;
   border-radius: 8px;
 
   box-shadow:
@@ -31,14 +31,22 @@
     inset 0 0 8px rgba(31, 122, 31, 0.5);
 }
 
+.chladicProcesor img {
+  position: relative;
+}
 
-  .chladicProcesor img {
-    position: relative;
+.pccase-cpuFan {
+  width: 124px;
+  height: 119px;
+  left: 180px;
+  top: -162px;
+}
+
+@media (max-width: 1276px) {
+  .chladicProcesor {
+    left: 10px;
+    width: 55px;
+    height: 50px;
+    top: 385px;
   }
-
-  .pccase-cpuFan {
-    width: 124px;
-    height: 119px;
-    left: 180px;
-    top: -162px; 
-   }
+}

@@ -42,3 +42,12 @@
   left: 87px;
   top: -204px;
 }
+
+@media (max-width: 1276px) {
+  .zdroj {
+    left: 10px;
+    width: 70px;
+    height: 50px;
+    top: 255px;
+  }
+}

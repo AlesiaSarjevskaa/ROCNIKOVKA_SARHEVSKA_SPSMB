@@ -41,3 +41,12 @@
   left: 64px;
   top: -434px;
 }
+
+@media (max-width: 1276px) {
+  .gpu {
+    left: 10px;
+    width: 70px;
+    height: 36px;
+    top: 450px;
+  }
+}

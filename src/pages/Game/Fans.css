@@ -41,3 +41,12 @@
   left: 52px;
   top: -864px;
 }
+
+@media (max-width: 1276px) {
+  .fans {
+    left: 10px;
+    width: 70px;
+    height: 50px;
+    top: 320px;
+  }
+}

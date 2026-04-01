@@ -41,3 +41,13 @@
   left: 405px;
   top: -614px;
 }
+
+@media (max-width: 1276px) {
+  .disk {
+    width: 60px;
+    height: 46px;
+    position: absolute;
+    top: 195px;
+    left: 10px;
+  }
+}
