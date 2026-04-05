@@ -17,6 +17,7 @@ import planktonPower from "../../Images/plankton/without_bg/plankton_power.png";
 import planktonGpu from "../../Images/plankton/without_bg/plankton_classical1.png";
 import planktonDisk from "../../Images/plankton/without_bg/plankton_classical5.png";
 import planktonFans from "../../Images/plankton/without_bg/plankton_classical1.png";
+import planktonFinished from "../../Images/plankton/without_bg/plankton_finished.png";
 
 import { Link } from "react-router-dom";
 
@@ -32,6 +33,7 @@ export default function Game() {
     planktonGpu,
     planktonDisk,
     planktonFans,
+    planktonFinished,
   ]);
   const [planktonCounter, setPlanktonCounter] = useState(0);
   const [placed, setPlaced] = useState({
