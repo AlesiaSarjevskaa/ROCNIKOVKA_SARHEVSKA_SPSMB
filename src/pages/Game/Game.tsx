@@ -19,6 +19,14 @@ import planktonDisk from "../../Images/plankton/without_bg/plankton_classical5.p
 import planktonFans from "../../Images/plankton/without_bg/plankton_classical1.png";
 import planktonFinished from "../../Images/plankton/without_bg/plankton_finished.png";
 
+import rostlina1 from "../../Images/dekorace/rostlina1.png";
+import rostlina2 from "../../Images/dekorace/rostlina2.png";
+import rostlina3 from "../../Images/dekorace/rostlina3.png";
+import rostlina4 from "../../Images/dekorace/rostlina4.png";
+import musle1 from "../../Images/dekorace/musle1.png";
+import musle2 from "../../Images/dekorace/musle2.png";
+
+
 import { Link } from "react-router-dom";
 
 export default function Game() {
@@ -276,6 +284,20 @@ export default function Game() {
         <Link to={"/"}>
           <button className="button">back</button>
         </Link>
+        <img className="rostlina1" src={rostlina1} alt="rostlina1" />
+        <img className="rostlina2" src={rostlina2} alt="rostlina2" />
+        <img className="rostlina3" src={rostlina3} alt="rostlina3" />
+        <img className="rostlina4" src={rostlina4} alt="rostlina4" />
+        <img className="musle1" src={musle1} alt="musle1" />
+        <img className="musle2" src={musle2} alt="musle2" />
+
+        <img className="rostlina-1" src={rostlina1} alt="rostlina-1" />
+        <img className="rostlina-2" src={rostlina2} alt="rostlina-2" />
+        <img className="rostlina-3" src={rostlina3} alt="rostlina-3" />
+        <img className="rostlina-4" src={rostlina4} alt="rostlina-4" />
+        <img className="musle-1" src={musle1} alt="musle-1" />
+        <img className="musle-2" src={musle2} alt="musle-2" />
+
         <div className="table">
           <div
             className="zakladniDeska component"

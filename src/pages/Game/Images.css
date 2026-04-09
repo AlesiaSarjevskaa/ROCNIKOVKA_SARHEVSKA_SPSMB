@@ -39,6 +39,98 @@
 }
 
 
+.rostlina1 {
+  top: 753px;
+  left: 0;
+  width: 296px;
+  height: 200px;
+  position: absolute;
+  z-index: 10;
+
+}
+.rostlina2 {
+  top: 688px;
+  left: 247px;
+  width: 170px;
+  height: 236px;
+  position: absolute;
+  z-index: 9;
+}
+.rostlina3 {
+  top: 700px;
+  left: 500px;
+  width: 300px;
+  height: 224px;
+  position: absolute;
+}
+.rostlina4 {
+  top: 783px;
+  left: 746px;
+  width: 210px;
+  height: 173px;
+  position: absolute;
+}
+.musle1 {
+  top: 810px;
+  left: 400px;
+  width: 130px;
+  height: 129px;
+  position: absolute
+}
+.musle2 {
+  top: 841px;
+  left: 500px;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+}
+
+.rostlina-1 {
+  top: 753px;
+  left: 1375px;
+  width: 296px;
+  height: 200px;
+  position: absolute;
+  z-index: 10;
+
+}
+.rostlina-2 {
+  top: 688px;
+  left: 1257px;
+  width: 170px;
+  height: 236px;
+  position: absolute;
+  z-index: 9;
+}
+.rostlina-3 {
+  top: 700px;
+  left: 1000px;
+  width: 300px;
+  height: 224px;
+  position: absolute;
+}
+.rostlina-4 {
+  top: 983px;
+  left: 900px;
+  width: 210px;
+  height: 173px;
+  position: absolute;
+}
+.musle-1 {
+  top: 815px;
+  left: 926px;
+  width: 130px;
+  height: 129px;
+  position: absolute;
+}
+.musle-2 {
+  top: 824px;
+  left: 1181px;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+}
+
 @media (max-width: 1276px) {
   .table{
     width: 100px;
