@@ -137,3 +137,42 @@
     left: 0px;
   }
 }
+
+@media (max-width: 1276px) {
+  .rostlina-1{
+    display: none;
+  }
+  .rostlina-2{
+    display: none;
+  }
+  .rostlina-3{
+    display: none;
+  }
+  .rostlina-4{
+    display: none;
+  }
+  .rostlina1{
+    display: none;
+  }
+  .rostlina2{
+    display: none;
+  }
+  .rostlina3{
+    display: none;
+  }
+  .rostlina4{
+    display: none;
+  }
+  .musle-1{
+    display: none;
+  }
+  .musle-2{
+    display: none;
+  }
+  .musle1{
+    display: none;
+  }
+  .musle2{
+    display: none;
+  }
+}
