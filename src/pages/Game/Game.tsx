@@ -30,7 +30,7 @@ import musle2 from "../../Images/dekorace/musle2.png";
 import { Link } from "react-router-dom";
 
 export default function Game() {
-  const [selectedId, setSelectedId] = useState(null);
+  const [selectedId, setSelectedId] = useState(0);
   const [info, setInfo] = useState("Všechno začíná u mámy – vlož MOTHERbord!");
   const [planktonImg, setPlanktonImg] = useState([
     planktonMotherboard,
@@ -55,27 +55,27 @@ export default function Game() {
     8: false,
   });
 
-  const motherboardHolderRef = useRef(null);
-  const cpuHolderRef = useRef(null);
-  const cpuFanHolderRef = useRef(null);
-  const RamHolderRef = useRef(null);
-  const PowerHolderRef = useRef(null);
-  const GpuHolderRef = useRef(null);
-  const DiskHolderRef = useRef(null);
-  const FansHolderRef = useRef(null);
+  const motherboardHolderRef = useRef<HTMLDivElement>(null);
+  const cpuHolderRef = useRef<HTMLDivElement>(null);
+  const cpuFanHolderRef = useRef<HTMLDivElement>(null);
+  const RamHolderRef = useRef<HTMLDivElement>(null);
+  const PowerHolderRef = useRef<HTMLDivElement>(null);
+  const GpuHolderRef = useRef<HTMLDivElement>(null);
+  const DiskHolderRef = useRef<HTMLDivElement>(null);
+  const FansHolderRef = useRef<HTMLDivElement>(null);
 
-  const motherboardButton = useRef(null);
-  const cpuButton = useRef(null);
-  const cpuFanButton = useRef(null);
-  const RamButton = useRef(null);
-  const PowerButton = useRef(null);
-  const GpuButton = useRef(null);
-  const DiskButton = useRef(null);
-  const FansButton = useRef(null);
+  const motherboardButton = useRef<HTMLDivElement>(null);
+  const cpuButton = useRef<HTMLDivElement>(null);
+  const cpuFanButton = useRef<HTMLDivElement>(null);
+  const RamButton =  useRef<HTMLDivElement>(null);
+  const PowerButton =  useRef<HTMLDivElement>(null);
+  const GpuButton =  useRef<HTMLDivElement>(null);
+  const DiskButton = useRef<HTMLDivElement>(null);
+  const FansButton =  useRef<HTMLDivElement>(null);
 
   // --- Funkce pro klik na holdery ---
   function motherboardHolderClick() {
-    if (selectedId === 1) {
+    if (selectedId === 1 && motherboardButton.current && cpuHolderRef.current && motherboardHolderRef.current) {
       motherboardButton.current.style.display = "none";
       cpuHolderRef.current.style.display = "block";
       setPlaced((prev) => ({ ...prev, 1: true }));
@@ -103,7 +103,7 @@ export default function Game() {
       setInfo("Vlož nejdříve základní desku!");
       return;
     }
-    if (selectedId === 2) {
+    if (selectedId === 2 && cpuButton.current && cpuHolderRef.current && cpuFanHolderRef.current) {
       cpuButton.current.style.display = "none";
       cpuFanHolderRef.current.style.display = "block";
       setPlaced((prev) => ({ ...prev, 2: true }));
@@ -128,7 +128,7 @@ export default function Game() {
       setInfo("Vlož nejdříve CPU!");
       return;
     }
-    if (selectedId === 3) {
+    if (selectedId === 3 && cpuFanButton.current && cpuFanHolderRef.current && RamHolderRef.current) {
       cpuFanButton.current.style.display = "none";
       RamHolderRef.current.style.display = "block";
       setPlaced((prev) => ({ ...prev, 3: true }));
@@ -154,7 +154,7 @@ export default function Game() {
       setInfo("Vlož nejdříve CPU a chladič!");
       return;
     }
-    if (selectedId === 4) {
+    if (selectedId === 4 && RamButton.current && PowerHolderRef.current && RamHolderRef.current) {
       RamButton.current.style.display = "none";
       PowerHolderRef.current.style.display = "block";
       setPlaced((prev) => ({ ...prev, 4: true }));
@@ -180,7 +180,7 @@ export default function Game() {
       setInfo("Vlož nejdříve RAM!");
       return;
     }
-    if (selectedId === 5) {
+    if (selectedId === 5 && PowerButton.current && GpuHolderRef.current && PowerHolderRef.current) {
       PowerButton.current.style.display = "none";
       GpuHolderRef.current.style.display = "block";
       setPlaced((prev) => ({ ...prev, 5: true }));
@@ -206,7 +206,7 @@ export default function Game() {
       setInfo("Vlož nejdříve Power!");
       return;
     }
-    if (selectedId === 6) {
+    if (selectedId === 6 && GpuButton.current && DiskHolderRef.current && GpuHolderRef.current) {
       GpuButton.current.style.display = "none";
       DiskHolderRef.current.style.display = "block";
       setPlaced((prev) => ({ ...prev, 6: true }));
@@ -231,7 +231,7 @@ export default function Game() {
       setInfo("Vlož nejdříve GPU!");
       return;
     }
-    if (selectedId === 7) {
+    if (selectedId === 7 && DiskButton.current && FansHolderRef.current && DiskHolderRef.current) {
       DiskButton.current.style.display = "none";
       FansHolderRef.current.style.display = "block";
       setPlaced((prev) => ({ ...prev, 7: true }));
@@ -257,7 +257,7 @@ export default function Game() {
       setInfo("Vlož nejdříve disk!");
       return;
     }
-    if (selectedId === 8) {
+    if (selectedId === 8 && FansButton.current && FansHolderRef.current && DiskHolderRef.current) {
       FansButton.current.style.display = "none";
       setPlaced((prev) => ({ ...prev, 8: true }));
       FansHolderRef.current.style.background =
